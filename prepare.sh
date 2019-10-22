@@ -5,10 +5,13 @@ function openBrowser(){
     xdg-open "http://localhost:3000"
 }
 
-mkdir -p output
+INPUT_DIR="${1:-$(pwd)/input}"
+OUTPUT_DIR="${2:-$(pwd)/output}"
+
+mkdir -p "{OUTPUT_DIR}"
 
 docker build -t presentation-builder:local ./.builder/
 
 openBrowser &
 
-docker run -it --rm -p 3000:80 -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output" presentation-builder:local ./preparer.sh
+docker run -it --rm -p 3000:80 -v "${INPUT_DIR}:/app/input" -v "${OUTPUT_DIR}:/app/output" presentation-builder:local ./preparer.sh

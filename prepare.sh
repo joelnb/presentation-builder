@@ -1,12 +1,11 @@
 #!/bin/bash
 
 function openBrowser(){
-    sleep 5 
+    sleep 5
     xdg-open "http://localhost:3000"
-    
 }
 
-mkdir output
+mkdir -p output
 
 docker build -t presentation-builder:local ./.builder/
 

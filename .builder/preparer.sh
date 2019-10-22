@@ -21,7 +21,7 @@ function block_for_change {
 
 function build {
   echo "Rebuilding on change!"
-  sudo -u user rsync -a /app/input/res /app/output/res
+  sudo -u user rsync -a /app/input/res/ /app/output/res/
   sudo -u user pandoc -V history=true -t revealjs -s /app/input/slides.md -o /app/output/index.html
 }
 

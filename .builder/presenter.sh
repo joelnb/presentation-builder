@@ -14,7 +14,7 @@ chown -R user:user /reveal.js
 sudo -u user rsync -a /reveal.js /app/output
 
 function build {
-  sudo -u user rsync -a /app/input/res /app/output/res
+  sudo -u user rsync -a /app/input/res/ /app/output/res/
   sudo -u user pandoc -V history=true -t revealjs -s /app/input/slides.md -o /app/output/index.html
 }
 

@@ -1,6 +1,6 @@
 FROM ubuntu
 
-ENV REVEAL_JS_VERSION=4.1.2
+ENV REVEAL_JS_VERSION=4.3.1
 
 VOLUME /app/input
 VOLUME /app/output

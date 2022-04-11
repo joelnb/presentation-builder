@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:20.04
 
 ENV REVEAL_JS_VERSION=4.3.1
 

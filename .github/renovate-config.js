@@ -7,6 +7,6 @@ module.exports = {
   platform: 'github',
   includeForks: false,
   repositories: [
-    'joelnb/sofa',
+    'joelnb/presentation-builder',
   ],
 };
